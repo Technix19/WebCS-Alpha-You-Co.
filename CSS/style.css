@@ -1,0 +1,1160 @@
+/* General Styles */
+/* Resets default margins and paddings, and applies box-sizing to include padding and border in element's total width and height */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:visited {
+    color: white;
+}
+
+/* Sets body styles with a black background and white text */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+/* Sticky Navbar */
+/* Styles the navbar logo, limiting its maximum width */
+.navbar img {
+    width: auto; 
+    max-width: 200px; /* Restricts logo size */
+    height: auto;
+}
+
+/* Navbar container: sticks to the top and spaces out content evenly */
+.navbar {
+    width: 100%;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Spaces content evenly */
+    align-items: center;
+    padding: 6px 5%; /* Padding inside navbar */
+    background-color: #000;
+    border-bottom: solid 2px #666;
+}
+
+/* Navbar list: evenly distributes the navigation links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Evenly spaces out the list items */
+    width: 30%; /* Controls the space the list takes */
+    margin: 0 14%; 
+    padding: 0;
+
+}
+
+/* Individual navbar list items */
+.navbar ul li {
+    margin: 0 20px; /* Adds spacing between items */
+    font-weight: bold;
+}
+
+/* Search Icon navbar */
+.navbar ul li img {
+    width: auto;
+    height: auto;
+    max-width: 20px;
+    overflow: hidden;
+}
+
+/* Styling for navbar links */
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.7s ease; /* Minimal Transition Animation */
+}
+
+/* Adds hover effect for navbar links */
+.navbar ul li a:hover {
+    color: #ffd440; /* Changes color on hover */
+    text-decoration: underline;
+}
+
+/* Button container: spaces the buttons */
+.buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+/* General button styles */
+button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px; /* Padding inside the button */
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth hover transitions */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: black;
+    color: #ffd440; /* Yellow text on hover */
+    border: 2px solid #ffd440; /* Yellow border on hover */
+}
+
+/* Section Layouts */
+/* General styles for sections, using a two-column grid */
+.section1, .section2, .section3, .section4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    padding: 60px 80px; /* Padding around sections */
+    gap: 40px; /* Space between columns */
+    align-items: center;
+    background-color: #000;
+    margin-bottom: 30px; /* Adds space below each section */
+}
+
+/* Image styles inside sections */
+.section1 img, .section2 img, .section3 img, .section4 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Textbox Styles */
+/* Styling for headings in sections */
+.textbox h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Styling for paragraphs in sections */
+.textbox p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Button Set */
+/* Flexbox for button alignment */
+.button_set {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+.button_set button {
+    padding: 10px 20px;
+}
+
+/* Info Section */
+/* Section styling for features, centered text */
+.info-section {
+    text-align: center;
+    padding: 80px; /* Padding around the section */
+    background-color: #000;
+}
+
+/* Styling for headings in the info section */
+.info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Styling for paragraphs in the info section */
+.info-section p {
+    font-size: 1.3rem;
+    margin-bottom: 50px; /* Space below text */
+}
+
+/* Card Container: grid layout for feature cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 30px; /* Space between the cards */
+    margin-bottom: 50px;
+}
+
+/* Styling for individual cards */
+.card {
+    background-color: #222; /* Dark card background */
+    padding: 30px; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px; /* Space below headings */
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+/* Contact section styling */
+.contact-section {
+    padding: 60px 80px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Heading and subheading styles for the contact section */
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    padding-bottom: 35px;
+    text-align: center;
+    border-bottom: solid 2px #333;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Grid layout for form and contact details */
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form takes 2/3 of the width, contact details take 1/3 */
+    gap: 40px; /* Space between form and contact details */
+}
+
+/* Flexbox for form layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox for grouping form inputs */
+.form-group {
+    display: flex;
+    gap: 20px; /* Space between input fields */
+    margin-bottom: 20px; /* Space below the group */
+}
+
+/* Styles for inputs and textareas in the form */
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Inputs take full width */
+    padding: 15px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #666; /* Light gray border */
+    border-radius: 5px;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    font-size: 1rem;
+}
+
+/* Placeholder text color */
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #bbb; /* Light gray placeholder text */
+}
+
+/* Styling for form submit button */
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover effect for form button */
+.contact-form button:hover {
+    background-color: black;
+    color: #ffd440;
+    border: 2px solid #ffd440;
+}
+
+/* Styling for contact details */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff; /* White text */
+}
+
+.contact-details a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Final Section */
+/* Styling for the final section with call-to-action */
+.final-section {
+    padding: 60px 80px;
+    background-color: #333; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+.final-section .textbox h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.final-section .textbox p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Button styles in the final section */
+.final-section .button_set {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.final-section .button_set button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover effect for final section buttons */
+.final-section .button_set button:hover {
+    background-color: black;
+    color: #ffd440;
+    border: 2px solid #ffd440;
+}
+
+/* Footer */
+/* Footer section styling */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 20px;
+    border-top: solid 2px #666;
+}
+
+footer img {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+footer .link:link {
+    color: white;
+}
+
+footer .link:hover {
+    color: #fdd440;
+}
+
+
+/* Styling Social Media Icons */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.social-media-icons i {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease; /* Slight animation effect on hovering */
+}
+
+.social-media-icons a:link {
+    color: white;
+}
+
+.social-media-icons a:hover {
+    color: #fdd440;
+}
+
+/* About Us Page */
+/* Container for the About section */
+.about {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Styling for the heading */
+.about h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Styling for the paragraph */
+.about p {
+    border: solid 2px #555;
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Add a subtle transition when hovering over the paragraph */
+.about p:hover {
+    background-color: #333;
+    border-color: #777;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Privacy Policy Styling */
+.policy {
+    width: 95%;
+}
+.policy h1, h2 {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.policy h2 {
+    text-decoration: underline;
+}
+
+.policy p {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+/* Terms and Conditions Styling */
+.terms {
+    width: 95%;
+}
+
+.terms h1, h2 {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.terms h2 {
+    text-decoration: underline;
+}
+
+.terms p {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* Team Styling */
+/* General Styles */
+.team {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+.team header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.team header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.team header p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Team Section */
+.teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 30%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Individual Member Styles */
+.member {
+    text-align: center;
+    width: 100%;
+    border: solid 2px #222;
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px #111;
+}
+
+.member img {
+    width: auto;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.member h1 {
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+}
+
+.member h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: underline;
+}
+
+.member p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Product Page */
+.product {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.product .left{
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+}
+
+.product .main-image {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.product .small-images {
+    display: flex;
+    margin-top: 0;
+    margin-left: 14%;
+    width: 60%;
+}
+
+.product .sub-image {
+    width: auto;
+    height: auto;
+    max-width: 40%;
+    overflow: hidden;
+    margin-right: 10px;
+    border: solid 1px whitesmoke;
+    border-radius: 10px;
+}
+
+.product .right {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.right h1 {
+    width: 90%;
+    font-size: 2.4rem;
+}
+
+.right .pricetags {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 34%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 7px 8px #333;
+}
+
+.pricetags h4 {
+    padding: 5px;
+    border: solid 2px #222;
+}
+
+.right .orig-price {
+    text-decoration: line-through;
+    opacity: 80%;
+}
+
+.right .buy-buttons {
+    width: 90%;
+    height: 120px; 
+    display: inline-block;
+}
+
+.buy-buttons .cart {
+    margin-bottom: 7.5px; 
+    width: 100%;
+    height: 50%;
+}
+
+.buy-buttons .pay {
+    margin-top: 7.5px;
+    width: 100%;
+    height: 50%;
+}
+
+.buy-buttons p {
+    text-decoration: underline;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 0.75rem
+}
+
+.img-text {
+    width: 85%;
+    display: flex;
+    margin: 50px 15px 15px 15px;
+}
+
+.img-text .img {
+    display: block;
+    margin: auto;
+    padding-right: 14px;
+    font-size: 1.5rem;
+}
+
+.img-text .text {
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.info p{
+    width: 88%;
+    margin-bottom: 12px; 
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 200%;
+    color: #EEE;
+}
+
+/* FAQ Page Styling */
+
+
+
+/* Header Styles */
+.faq header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.faq header h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.faq header p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* FAQ Section */
+.faqs {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: black;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #444;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #222;
+    border-top: 1px solid #ccc;
+}
+
+
+
+
+/* Responsive Design */
+/* Media query for screens below 768px (Tablets, small
+
+
+
+/* Responsive Design */
+/* Desktop Viewport */
+@media (max-width: 1580px) {
+    .mobile {
+        display: none;
+    }
+
+    .tablet-only {
+        display: none;
+    }
+
+}
+/* Responsive Design */
+/* Tablet Viewport */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Navbar Tablet */
+    .navbar {
+        width: 100%;
+        height: 75px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between; /* Aligns logo and nav items evenly */
+        align-items: center;
+        padding: 10px 20px; /* Slightly more padding for spacing */
+        background-color: black;
+        border-bottom: solid 2px #666;
+        gap: 10px;
+    }
+
+    .navbar img {
+        max-width: 120px; /* Adjusts logo size for tablet screens */
+        height: auto;
+    }
+
+    /* Navbar links */
+    .navbar ul {
+        width: 90%;
+        display: flex;
+        justify-content: space-around; /* Ensures links are spaced evenly */
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        flex: 1;
+        margin: auto 5px;
+        text-align: center; /* Centers the text for better appearance */
+    }
+
+    .navbar ul li a {
+        font-size: 1rem; /* Slightly larger font size for tablet */
+        font-weight: bolder;
+        padding: 10px 15px; /* Add padding for touch-friendly links */
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+        color: #ffd440; /* Hover effect for better interaction */
+    }
+
+    /* Section Layout */
+    .section1, .section2, .section3, .section4 {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+
+    /* Hide buttons */
+    .buttons {
+        display: none;
+    }
+
+    .not-for-tablet {
+        display:none;
+    }
+
+    .tablet-only {
+        display: block;
+    }
+}
+
+/* Mobile Viewport */
+@media (max-width: 767px) {
+    /* Navbar Mobile */
+    .mobile-navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        height: 10%;
+        border-bottom: solid 2px #666; 
+    }
+
+    .mobile .logo {
+        width: auto;
+        height: auto;
+        max-width: 150px;
+    }
+
+    /* Adjust padding for the contact section on mobile */
+    .contact-section {
+        padding: 20px 15px; /* Reduced padding for smaller screens */
+    }
+
+    /* Adjust heading sizes for mobile */
+    .contact-section h2 {
+        margin-top: 20px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-section h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Make the form and contact details stack vertically */
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Reduced gap for mobile */
+    }
+
+    /* Adjust input fields to fit properly on mobile */
+    .form-group {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 10px; /* Reduced gap between fields */
+    }
+
+    /* Contact form inputs and text area adjustments */
+    .contact-form input, .contact-form textarea {
+        padding: 10px; /* Less padding for mobile */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Contact details adjustments for mobile */
+    .contact-details {
+        font-size: 1rem; /* Smaller font size */
+        padding: 10px 0; /* Adjust padding */
+    }
+
+    .contact-form button {
+        padding: 10px 15px; /* Adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    /* Reduce padding for mobile view */
+    .info-section {
+        padding: 40px 20px; /* Less padding on mobile */
+    }
+
+    /* Reduce heading size for mobile */
+    .info-section h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+        margin-bottom: 20px; /* Reduce bottom margin */
+    }
+
+    /* Reduce paragraph font size */
+    .info-section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px; /* Reduce bottom margin */
+    }
+
+    /* Change card layout to single column on mobile */
+    .card-container {
+        grid-template-columns: 1fr; /* Single column for cards on mobile */
+        gap: 20px; /* Less gap between cards */
+    }
+
+    /* Adjust card padding and font size for mobile */
+    .card {
+        padding: 20px; /* Less padding on mobile */
+    }
+
+    .card h3 {
+        font-size: 1.5rem; /* Smaller heading for cards on mobile */
+    }
+
+    .card p {
+        font-size: 1rem; /* Smaller paragraph for cards */
+    }
+
+    .final-section {
+        padding: 40px 20px; /* Less padding for mobile */
+    }
+
+    .final-section .textbox h2 {
+        font-size: 2rem; /* Smaller heading size on mobile */
+        margin-bottom: 15px; /* Reduce bottom margin */
+    }
+
+    .final-section .textbox p {
+        font-size: 1rem; /* Reduce paragraph font size on mobile */
+        margin-bottom: 20px; /* Less margin below paragraph */
+    }
+
+
+    .not-for-mobile {
+        display: none; 
+    }
+
+    .tablet-desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile-navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(38, 38, 38, 90%);
+    }
+
+    .mobile-navbar ul.active {
+        display: flex;
+    }
+
+    .mobile-navbar ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-navbar ul li a:link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .mobile-navbar ul li a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .mobile-navbar ul li a:hover {
+        color: #ffd440;
+        text-decoration: underline;
+    }
+
+
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Hide the menu by moving it off the screen */
+        top: 70px;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Moves the menu into view */
+        
+    }
+
+    /* Section Layout for Mobile */
+    .section1, .section2, .section3, .section4 {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .section1 img, .section2 img, .section3 img, .section4 img {
+        width: 100%;
+    }
+
+    .textbox h1 {
+        font-size: 1.8rem;
+    }
+
+    .textbox p {
+        font-size: 1.1rem;
+    }
+
+    /* Adjust product layout for mobile */
+    .product {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        margin: 20px 0; /* Reduced margin for smaller screens */
+    }
+
+    .product .left, .product .right {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Padding for better spacing */
+    }
+
+    .product .main-image {
+        max-width: 90%; /* Slightly larger for mobile */
+    }
+
+    .product .small-images {
+        flex-direction: row;
+        flex-wrap: wrap; /* Allow images to wrap */
+        justify-content: center; /* Center images */
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .product .sub-image {
+        max-width: 30%; /* Smaller size for mobile */
+        margin-bottom: 10px; /* Space between rows */
+    }
+
+    .right h1 {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+        width: 100%; /* Full width for heading */
+        text-align: center;
+    }
+
+    .right .pricetags {
+        width: 80%; /* Expand width for mobile */
+        justify-content: space-between; /* Space out items */
+    }
+
+    .right .buy-buttons {
+        height: auto; /* Auto height for flexibility */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .buy-buttons .cart, .buy-buttons .pay {
+        height: 40px; /* Adjust height for mobile */
+    }
+
+    .buy-buttons p {
+        font-size: 0.8rem; /* Slightly larger text for mobile */
+        margin-top: 15px; /* Adjust margin */
+    }
+
+    /* Adjust img-text section for mobile */
+    .img-text {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        margin: 30px auto;
+    }
+
+    .img-text .img {
+        padding-right: 0;
+        margin-bottom: 15px; /* Space below image */
+    }
+
+    .img-text .text {
+        text-align: center;
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    /* Info section adjustments */
+    .info p {
+        width: 100%; /* Full width for mobile */
+        font-size: 1.2rem; /* Smaller font size */
+        margin: 20px 0;
+    }
+}
